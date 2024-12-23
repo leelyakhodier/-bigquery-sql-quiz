@@ -36,7 +36,7 @@ WHERE
   AND refresh_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)
   -- Filter to the last 2 weeks.
   AND country_name='United Kingdom'
-GROUP BY Day, Top_Term, region
+GROUP BY Day, Top_Term, region, rank
 ORDER BY Day DESC
 -- Show the days in reverse chronological order.
 
